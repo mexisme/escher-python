@@ -13,6 +13,13 @@ except:
     from urllib.parse import urlparse, parse_qsl, urljoin, quote
 
 
+def double_quote(value, *args, **kwargs):
+    """
+    This function double-encodes query arguments, as required by the AWS4 Signature Spec.
+    """
+    return quote(quote(value, *args, **kwargs), *args, **kwargs)
+
+
 class EscherException(Exception):
     pass
 
