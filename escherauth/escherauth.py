@@ -67,7 +67,9 @@ class EscherRequest():
     def headers(self):
         if self.type is requests.models.PreparedRequest:
             headers = []
-            for key, value in self.request.headers.iteritems():
+            # NOTE: for Py3 iteritems() --> items()
+            # for key, value in self.request.headers.iteritems():
+            for key, value in self.request.headers.items():
                 headers.append([key, value])
             return headers
         if self.type is dict:
