@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "escher-python"
+version = "0.1.0"
+description = ""
+authors = ["Will <wildjim+dev@kiwinet.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+nose = "^1.3.3"
+nose_parameterized = "0.3.4"
+mamba = "^0.11.2"
+PyHamcrest = "^2.0.2"
+requests-mock = "^1.9.3"
+pep8 = "^1.7.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
